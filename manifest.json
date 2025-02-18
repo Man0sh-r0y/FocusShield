@@ -1,0 +1,38 @@
+{
+    "name": "Block distracting Website",
+    "description": "Blocks distracting websites to enhance focus and productivity",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "./styles/ContentScript.css"
+            ],
+            "js": [
+                "./scripts/contentScript.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "./scripts/background.js"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "icons": {
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
+    }
+}
