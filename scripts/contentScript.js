@@ -53,7 +53,6 @@ chrome.runtime.onMessage.addListener((message, sender) => {
                 CloseTab()
             }
         }, 1000);
-
     }
 })
 
