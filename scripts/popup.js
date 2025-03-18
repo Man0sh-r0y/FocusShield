@@ -85,8 +85,6 @@ document.getElementById("btn").addEventListener("click", () => {
                                 }
                             })
                         })
-
-
                     }, 5000);
 
                 }
